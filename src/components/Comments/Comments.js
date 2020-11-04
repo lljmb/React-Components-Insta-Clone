@@ -4,10 +4,15 @@ import './Comments.css';
 
 const Comments = props => {
   // 🔥 Make sure the parent of Comments is passing the right props!
-  const { comments } = props;
+  const { comment } = props;
 
   return (
     <div>
+      {
+        comment.map(cmnt => {
+          return <Comment key={cmnt.id} comment={cmnt} />
+        })
+      }
     
     </div>
   );
